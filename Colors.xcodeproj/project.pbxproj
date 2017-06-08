@@ -13,7 +13,7 @@
 		992C20391EE8426300197890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992C20371EE8426300197890 /* Main.storyboard */; };
 		992C203B1EE8426300197890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992C203A1EE8426300197890 /* Assets.xcassets */; };
 		992C203E1EE8426300197890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992C203C1EE8426300197890 /* LaunchScreen.storyboard */; };
-		992C20491EE8426300197890 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C20481EE8426300197890 /* ColorsTests.swift */; };
+		99E6DA231EE8B36900A8DF06 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6DA221EE8B36900A8DF06 /* ViewControllerSpec.swift */; };
 		F57D2CAFFD265AB4B37572E7 /* Pods_Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F68C5EF28921B09509DAB /* Pods_Colors.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +40,8 @@
 		992C203D1EE8426300197890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		992C203F1EE8426300197890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992C20441EE8426300197890 /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		992C20481EE8426300197890 /* ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTests.swift; sourceTree = "<group>"; };
 		992C204A1EE8426300197890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E6DA221EE8B36900A8DF06 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		CB40933B6208A28A25E42357 /* Pods-Colors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colors.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colors/Pods-Colors.release.xcconfig"; sourceTree = "<group>"; };
 		CE7F68C5EF28921B09509DAB /* Pods_Colors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,8 +122,8 @@
 		992C20471EE8426300197890 /* ColorsTests */ = {
 			isa = PBXGroup;
 			children = (
-				992C20481EE8426300197890 /* ColorsTests.swift */,
 				992C204A1EE8426300197890 /* Info.plist */,
+				99E6DA221EE8B36900A8DF06 /* ViewControllerSpec.swift */,
 			);
 			path = ColorsTests;
 			sourceTree = "<group>";
@@ -190,6 +190,7 @@
 					992C20431EE8426300197890 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 6UM2WYVE6K;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 992C202F1EE8426300197890;
 					};
@@ -341,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992C20491EE8426300197890 /* ColorsTests.swift in Sources */,
+				99E6DA231EE8B36900A8DF06 /* ViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,11 +503,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6UM2WYVE6K;
 				INFOPLIST_FILE = ColorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpioy.ColorsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Colors.app/Colors";
 			};
@@ -518,6 +521,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6UM2WYVE6K;
 				INFOPLIST_FILE = ColorsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -547,6 +551,7 @@
 				992C204F1EE8426300197890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992C20501EE8426300197890 /* Build configuration list for PBXNativeTarget "ColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +560,7 @@
 				992C20521EE8426300197890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
