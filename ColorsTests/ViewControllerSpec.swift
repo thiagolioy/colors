@@ -12,6 +12,19 @@ import Nimble
 
 @testable import Colors
 
+//Ter uma forma de controlar a implementacao do navigationController
+class FakeNavigationController: UINavigationController {
+    
+    var didCallPush = false
+    var controllersInStack: [UIViewController] = []
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        super.pushViewController(viewController, animated: animated)
+        controllersInStack.append(viewController)
+        didCallPush = true
+    }
+}
+
 class ViewControllerSpec: QuickSpec {
     override func spec() {
         describe("should test the view controller") {
@@ -142,6 +155,46 @@ class ViewControllerSpec: QuickSpec {
             }
             
             
+            
+            describe("proceedToListController") {
+                
+                var navigation: FakeNavigationController!
+                
+                beforeEach {
+                    navigation = FakeNavigationController(rootViewController: sut)
+                    navigation.didCallPush = false
+                }
+                
+                it("should have a navigation controller") {
+                    expect(sut.navigationController).toNot(beNil())
+                }
+                
+                it("should have a expected count of controllers in stack") {
+                    let controllerInStack = navigation.viewControllers.count
+                    expect(controllerInStack).to(equal(1))
+                }
+                
+                it("should have expected value for didCallPush") {
+                    expect(navigation.didCallPush).to(beFalse())
+                }
+                
+                it("should have called didCallPush after navigation") {
+                    sut.proceedToColorsList()
+                    expect(navigation.didCallPush).to(beTrue())
+                }
+                
+                it("should have expected controllers in stack") {
+                    let controllers = navigation.controllersInStack
+                    expect(controllers.count).to(equal(1))
+                }
+                
+                it("should have expected controllers in stack after proceedToColorsList") {
+                    sut.proceedToColorsList()
+                    let controllers = navigation.controllersInStack
+                    expect(controllers.count).to(equal(2))
+                    expect(controllers.last!).to(beAKindOf(ListViewController.self))
+                }
+            }
             
             
             
