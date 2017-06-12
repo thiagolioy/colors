@@ -13,6 +13,8 @@
 		992C20391EE8426300197890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992C20371EE8426300197890 /* Main.storyboard */; };
 		992C203B1EE8426300197890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992C203A1EE8426300197890 /* Assets.xcassets */; };
 		992C203E1EE8426300197890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992C203C1EE8426300197890 /* LaunchScreen.storyboard */; };
+		996839AB1EEF2D2E00663D53 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996839AA1EEF2D2E00663D53 /* ListViewController.swift */; };
+		996839AD1EEF2DE100663D53 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996839AC1EEF2DE100663D53 /* ColorCell.swift */; };
 		99E6DA231EE8B36900A8DF06 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E6DA221EE8B36900A8DF06 /* ViewControllerSpec.swift */; };
 		F57D2CAFFD265AB4B37572E7 /* Pods_Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7F68C5EF28921B09509DAB /* Pods_Colors.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		992C203F1EE8426300197890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992C20441EE8426300197890 /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		992C204A1EE8426300197890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996839AA1EEF2D2E00663D53 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		996839AC1EEF2DE100663D53 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		99E6DA221EE8B36900A8DF06 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		CB40933B6208A28A25E42357 /* Pods-Colors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colors.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colors/Pods-Colors.release.xcconfig"; sourceTree = "<group>"; };
 		CE7F68C5EF28921B09509DAB /* Pods_Colors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +119,8 @@
 				992C203A1EE8426300197890 /* Assets.xcassets */,
 				992C203C1EE8426300197890 /* LaunchScreen.storyboard */,
 				992C203F1EE8426300197890 /* Info.plist */,
+				996839AA1EEF2D2E00663D53 /* ListViewController.swift */,
+				996839AC1EEF2DE100663D53 /* ColorCell.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -334,7 +340,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				992C20361EE8426300197890 /* ViewController.swift in Sources */,
+				996839AD1EEF2DE100663D53 /* ColorCell.swift in Sources */,
 				992C20341EE8426300197890 /* AppDelegate.swift in Sources */,
+				996839AB1EEF2D2E00663D53 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

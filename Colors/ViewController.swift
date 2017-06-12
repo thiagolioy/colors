@@ -74,6 +74,12 @@ class ViewController: UIViewController {
     @IBAction func next() {
         updatePage(page: currentPage + 1)
     }
+    
+    @IBAction func proceedToColorsList() {
+        
+        navigationController?
+            .pushViewController(ListViewController.fromStoryboard(), animated: true)
+    }
 }
 
 extension ViewController {

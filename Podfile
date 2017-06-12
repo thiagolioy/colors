@@ -6,6 +6,7 @@ target 'Colors' do
   use_frameworks!
 
   # Pods for Colors
+  pod "Reusable"
 
   target 'ColorsTests' do
     inherit! :search_paths
